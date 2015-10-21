@@ -19,5 +19,9 @@
   },
   "scripts": {
     "test": "node test/simple-test.js && node test/no-proxy-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmalecki/hyperquest-proxy.git"
   }
 }
