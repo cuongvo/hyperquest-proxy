@@ -1,12 +1,12 @@
 var clone = require('clone')
 var hyperquest = require('hyperquest')
-var HTTPProxyAgent = require('http-proxy-agent')
+var HTTPSProxyAgent = require('https-proxy-agent')
 
 module.exports = function (proxyOptions, hyperquest_) {
   var h = hyperquest_ || hyperquest
   var agent
 
-  if (proxyOptions) agent = new HTTPProxyAgent(proxyOptions);
+  if (proxyOptions) agent = new HTTPSProxyAgent(proxyOptions);
 
   return function(uri, opts, cb) {
     if (typeof uri === 'object') {
